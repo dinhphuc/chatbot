@@ -13,8 +13,11 @@
 
 ### Step 3: Set Google authenticator
 1. [Two-factor authentication](https://www.facebook.com/security/2fac/settings/).
+
 ![Two-factor authentication](https://i.imgur.com/cBpBezY.png)
-2. In Mobile open app [Google authenticator] `open - > scan QR` enter `Code` 
+
+2. In Mobile open app [Google authenticator] `open - > scan QR` enter `Code`
+
 ![Two-factor authentication](https://i.imgur.com/CVaokMR.png)
 
 
@@ -26,7 +29,18 @@
 
 3. Edit file `login.js`
 ![Open file](https://i.imgur.com/QxJNrWy.png)
+
 4. On cmd screen  
  - Run `node login.js` -> Created file ` appstate.json`
  - Run `node bot.js`
+
+## Deploy on heroku
+
+1. Create app and push code
+
+![Create App](https://i.imgur.com/ZMTNrMe.gif)
+
+2 - Start :tw-1f44c: :tw-1f44c:
+
+![Run](https://i.imgur.com/QNY4JJh.gif)
 
