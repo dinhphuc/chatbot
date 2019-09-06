@@ -1,0 +1,1 @@
+node: node bot.js
