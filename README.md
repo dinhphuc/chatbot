@@ -40,7 +40,7 @@
 
 ![Create App](https://i.imgur.com/ZMTNrMe.gif)
 
-2 - Start :tw-1f44c: :tw-1f44c:
+2 - Start  
 
 ![Run](https://i.imgur.com/QNY4JJh.gif)
 
