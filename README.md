@@ -10,7 +10,7 @@
 ### Step 2: Install Environment
 1. [Node js](https://nodejs.org/dist/v10.16.3/node-v10.16.3-x64.msi).
 2. App: Google authenticator [On AppStore or CH Play]
-
+3. Git: [Git](https://git-scm.com/)
 ### Step 3: Set Google authenticator
 1. [Two-factor authentication](https://www.facebook.com/security/2fac/settings/).
 
