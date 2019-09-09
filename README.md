@@ -47,3 +47,13 @@
 
 ![Run](https://i.imgur.com/QNY4JJh.gif)
 
+### Edit file - > Push on host
+
+`git add .`
+
+`git commit -m "content comment"`
+
+`git push heroku master`
+
+![Create App](https://i.imgur.com/LlyvegL.gif)
+
