@@ -23,7 +23,7 @@ login(obj, (err, api) => {
         }
         return;
     }
-    // Logged in wirite cookie!
+    // Logged in wirite session !
     fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
     
      

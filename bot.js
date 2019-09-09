@@ -5,7 +5,7 @@ var answeredThreads = {};
 login({appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8'))}, (err, api) => {
  
     api.setOptions({
-     selfListen: true,
+     selfListen: false,
         logLevel: "silent",
         updatePresence: false
     });
