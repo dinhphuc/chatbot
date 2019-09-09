@@ -21,14 +21,17 @@
 ![Two-factor authentication](https://i.imgur.com/CVaokMR.png)
 
 
-### Step 4 - IOS configuration
+### Step 4 - Edit content
 1. Open file
 ![Open file](https://i.imgur.com/tHHZ5p1.gif)
 
-2. Run `npm install --save`
+2. Run `npm install `
 
 3. Edit file `login.js`
 ![Open file](https://i.imgur.com/QxJNrWy.png)
+
+4.   Edit file `bot.js`
+![Open file](https://i.imgur.com/zsyRrVq.png)
 
 4. On cmd screen  
  - Run `node login.js` -> Created file ` appstate.json`
@@ -40,7 +43,7 @@
 
 ![Create App](https://i.imgur.com/ZMTNrMe.gif)
 
-2 - Start  
+2 - Start  (This is option **ON** - **OFF** bot)
 
 ![Run](https://i.imgur.com/QNY4JJh.gif)
 
