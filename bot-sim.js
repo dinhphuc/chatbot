@@ -4,7 +4,10 @@ var FormData = require('form-data');
 const simsimi = require('simsimi')({
 	key: 'xM3sVHl9QWuN3xx+Bh0ds9EnEHWslRnYIOLphVk/',
 	lang: "vn",
+	atext_bad_prob_max:0.5,
+	atext_bad_prob_min:0.2,
 });
+
 
 var answeredThreads = {};
 var isSimsimi = false;
