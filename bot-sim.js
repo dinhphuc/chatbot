@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const login = require("facebook-chat-api");
 var FormData = require('form-data');
 const simsimi = require('simsimi')({
@@ -42,7 +42,7 @@ login({ appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8')) }, (err, 
 		}
 
 		if (!answeredThreads.hasOwnProperty(message.threadID)) {
-
+ 
 			//Chức năng này dành cho người muốn bỏ qua ID nào đó
 			// Tìm id ở đây https://findmyfbid.in/
 			// Thêm 1 người vào chỉ cần thêm dấu ,"ID người"
