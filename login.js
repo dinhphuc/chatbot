@@ -7,7 +7,8 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-const obj = {email: "Email", password: "Pass"};
+//Login Account facebook 
+const obj = {email: "Your Email", password: "Your Passs"};
 login(obj, (err, api) => {
     if(err) {
         switch (err.error) {
@@ -23,7 +24,7 @@ login(obj, (err, api) => {
         }
         return;
     }
-    // Logged in wirite session !
+    // Logged in wirite session
     fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
     
      

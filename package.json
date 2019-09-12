@@ -5,13 +5,15 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start":"node index.js"
-    
+    "start": "node index.js"
   },
   "author": "PhucBinz",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "facebook-chat-api": "^1.6.1"
+    "facebook-chat-api": "^1.6.1",
+    "request": "^2.88.0",
+    "simsimi": "^3.0.0"
   }
 }
