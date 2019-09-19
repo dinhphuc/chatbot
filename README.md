@@ -57,3 +57,9 @@
 
 ![Create App](https://i.imgur.com/LlyvegL.gif)
 
+### Create Traffic for website app
+1. Go to [pingdom](https://www.pingdom.com). -> Create Account
+![pingdom](https://i.imgur.com/YxYqWnr.png)
+2. add website app
+![pingdom](https://i.imgur.com/nZD6qvw.png)
+ 
