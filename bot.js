@@ -1,12 +1,6 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const login = require("facebook-chat-api");
-var FormData = require('form-data');
-const simsimi = require('simsimi')({
-	key: 'xM3sVHl9QWuN3xx+Bh0ds9EnEHWslRnYIOLphVk/',
-	lang: "vn",
-	atext_bad_prob_max:0.5,
-	atext_bad_prob_min:0.2,
-});
+var request = require('request');
 
 var answeredThreads = {};
 var isSimsimi = false;
@@ -15,7 +9,8 @@ login({ appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8')) }, (err, 
 	api.setOptions({
 		selfListen: false,
 		logLevel: "silent",
-		updatePresence: false
+		updatePresence: false,
+		//userAgent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
 	});
 	if (err) return console.error(err);
 	api.listen(function callback(err, message) {
@@ -32,15 +27,22 @@ login({ appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8')) }, (err, 
 		}
 
 		if (isSimsimi) {
-			(async () => {
-				try{ 
-					const response = await simsimi(message.body);
-					api.sendMessage(response, message.threadID);
-				}catch{
-					api.sendMessage("Bot không hiểu bạn nói. Xin lỗi nha :(", message.threadID);
-				}
-			})();
-			return console.log("sim next");
+			try {
+				request.post({
+					url:     'http://undertheseanlp.com:8000/chatbot',
+					body:   JSON.stringify({"text":  message.body, "user":  message.threadID}),  
+					contentType: 'application/json'
+				}, function (error, response, body) {
+					const rp = JSON.parse(body);
+					if (rp != null && rp.output != undefined) {
+						api.sendMessage(rp.output, message.threadID);
+					}
+				});
+
+			} catch{
+				api.sendMessage("Bot không hiểu bạn nói. Xin lỗi nha :(", message.threadID);
+			} 
+			return console.log("Bot next");
 		}
 
 		if (!answeredThreads.hasOwnProperty(message.threadID)) {
