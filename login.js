@@ -7,9 +7,15 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-//Login Account facebook 
-const obj = {email: "Your Email", password: "Your Passs"};
-login(obj, (err, api) => {
+const option = {
+    logLevel:"silent",
+    forceLogin:true,
+   // userAgent:  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
+   //* cách lấy userAgent: F12-> tab console gõ 'navigator.userAgent' Link: https://imgur.com/oQ5hUkH
+}
+
+const obj = {email: "FB_EMAIL", password: "FB_PASSWORD"};
+login(obj, option, (err, api) => {
     if(err) {
         switch (err.error) {
             case 'login-approval':
@@ -24,7 +30,7 @@ login(obj, (err, api) => {
         }
         return;
     }
-    // Logged in wirite session
+    // Logged in wirite cookie!
     fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
     
      
