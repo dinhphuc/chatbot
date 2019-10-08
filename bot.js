@@ -112,7 +112,7 @@ login({
             //#1. use simsimi
             // useSimsimi(message.threadID,message.body,api); 
             //#2. use Undertheseanlp
-            useUndertheseanlp(message.threadID, message.body, user);
+            useUndertheseanlp(message.threadID, message.body, user,api);
             return console.log("Pet next");
         }
 
