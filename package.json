@@ -12,7 +12,7 @@
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "facebook-chat-api": "^1.6.1",
+    "facebook-chat-api": "github:7osCraft/facebook-chat-api",
     "request": "^2.88.0",
     "simsimi": "^3.0.0"
   }
