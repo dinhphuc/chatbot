@@ -83,7 +83,7 @@ login({
     var yourId = api.getCurrentUserID(); //lấy Id người login hiện tại
 
 
-    api.listen(function callback(err, message) {
+    api.listenMqtt(function callback(err, message) {
         //block icon: fix bug khi nhận đc icon
         if (message.body == '') {
             api.sendMessage("Bot không hiểu bạn nói. Xin lỗi nha :(", message.threadID);
